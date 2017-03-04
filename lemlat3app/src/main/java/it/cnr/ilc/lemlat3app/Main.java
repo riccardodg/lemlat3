@@ -1,3 +1,11 @@
+package it.cnr.ilc.lemlat3app;
+
+
+import java.util.Properties;
+
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +23,10 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("Main.main()");
+        PropertyLoader propLoad=new PropertyLoader("/db.properties");
+       Properties prop = propLoad.propertyLoader("/db.properties");
+       String host=prop.getProperty("host");
+       System.err.println("host "+host);
     }
     
 }
