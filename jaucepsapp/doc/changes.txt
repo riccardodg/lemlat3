@@ -1,0 +1,38 @@
+
+-- work for volo --
+Comparator.java
+@line 850 
+/* RDG*/
+travellingtables.setCopiedLessario(areal); /* set areal as copiedlessario */
+
+@line 973
+/* RDG*/
+travellingtables.setCopiedLessario(areal);  /* set areal as copiedlessario */ 
+
+
+InputFunctions.java 
+@line 1289
+- if (!sil.getInd_alt().equals("")) {
++ if (sil.getInd_alt().equals("")) {
+
+Sillib.java
+@line 475,644
++ /* RDG*/
++ travellingtables.setCopiedLessario(areal); /* set areal as copiedlessario */
+
+@line 889
+- travellingtables.setTabLessario(tabLessario);
++ /*RDG
++ was areal=tabLessario
++ */
++ travellingtables.setTabLessario(areavs); /* set areavs as tabLessario */
+
+@line 895
+- areal = tabLessario;
+- travellingtables.setCopiedLessario(areal);
++ travellingtables.setCopiedLessario(tabLessario);
+
+@line 
+- String codLE = areal.getCodLE();
+-
++ String codLE = travellingtables.getTabLe().getLE_CODLE();
